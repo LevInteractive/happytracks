@@ -28,7 +28,7 @@ happy.track("server", spawn("npm", ["run-script", "server"]));
 
 await happy.track("compile-js", spawn("yarn", ["run", "relay"])); // <= wait until done
 
-happy.track("server", spawn("npm", ["run-script", "server"]));
+happy.track("My Great Process", spawn("npm", ["run-script", "greatness"]));
 ```
 
 ### Real life example
