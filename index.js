@@ -6,7 +6,7 @@ exports.track = function track(name, cp) {
     cp.stdout.on("data", data => log(name, data.toString()));
     cp.stderr.on("data", data => log(name, colors.red(data.toString())));
     cp.on("close", code => {
-      log(name, theme.close(`exit code: ${code}`));
+      log(name, colors.yellow(`exit code: ${code}`));
       resolve();
     });
     cp.on("error", reject);
