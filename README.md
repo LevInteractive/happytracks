@@ -79,10 +79,14 @@ happy.track(
       `${ROOT_DIR}/src/client/stylus/`
     ],
     {
-      env: Object.assign({}, process.env, {
-        CLIENT_PATH: `${ROOT_DIR}/src/client`,
-        SERVER_PATH: `${ROOT_DIR}/src/server`
-      })
+      env: Object.assign(
+        {},
+        {
+          CLIENT_PATH: `${ROOT_DIR}/src/client`,
+          SERVER_PATH: `${ROOT_DIR}/src/server`
+        },
+        process.env
+      )
     }
   )
 );
