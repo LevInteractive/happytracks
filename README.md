@@ -54,13 +54,16 @@ happy.track(
       `${ROOT_DIR}/src/server/bin/www`
     ],
     {
-      env: Object.assign({}, {
-        NODE_ENV: env,
-        DEBUG: "app:*",
-        NODE_PATH: `${ROOT_DIR}/src/server`,
-        NODE_CONFIG_DIR: `${ROOT_DIR}/src/server/config`,
-        PORT: 3000
-      }, process.env)
+      env: Object.assign(
+        {}, 
+        {
+          DEBUG: "app:*",
+          NODE_PATH: `${ROOT_DIR}/src/server`,
+          NODE_CONFIG_DIR: `${ROOT_DIR}/src/server/config`,
+          PORT: 3000
+        },
+        process.env
+      )
     }
   )
 );
