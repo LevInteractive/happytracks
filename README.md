@@ -21,11 +21,14 @@ happy.track("compile-js", spawn("./build-js", []));
 happy.track("compile-styles", spawn("./build-css", []));
 ```
 
-For convenience, you may also run them synchronously.
+For convenience, you may also run them synchronously. This would be useful for a script which must run before others (e.g. processing a graphql json file).
 
 ```javascript
-await happy.track("compile-js", spawn("./build-js", []));
-await happy.track("compile-styles", spawn("./build-css", []));
+happy.track("server", spawn("npm", ["run-script", "server"]));
+
+await happy.track("compile-js", spawn("yarn", ["run", "relay"])); // <= wait until done
+
+happy.track("server", spawn("npm", ["run-script", "server"]));
 ```
 
 ### Real life example
