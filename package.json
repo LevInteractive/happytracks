@@ -1,0 +1,23 @@
+{
+  "name": "happytracks",
+  "version": "1.0.0",
+  "description": "A minimal child process manager for node.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LevInteractive/happytracks.git"
+  },
+  "keywords": ["child", "processes", "concurrency", "cli"],
+  "author": "Pete Saia <pete@lev-interactive.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LevInteractive/happytracks/issues"
+  },
+  "homepage": "https://github.com/LevInteractive/happytracks#readme",
+  "dependencies": {
+    "colors": "^1.1.2"
+  }
+}
