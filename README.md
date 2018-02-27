@@ -34,7 +34,7 @@ happy.track("My Great Process", spawn("npm", ["run-script", "greatness"]));
 ### Real life example
 
 ```javascript
-const spawn = require("child_process").spawn;
+const { spawn } = require("child_process");
 const happy = require("happytracks");
 
 happy.track(
